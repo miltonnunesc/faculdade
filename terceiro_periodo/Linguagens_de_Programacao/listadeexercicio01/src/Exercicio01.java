@@ -7,25 +7,24 @@ public class Exercicio01 {
 
         int[] numeros = new int[10];
 
-        for(int i = 0; i < numeros.length; i++) {
-            System.out.printf("Informe o %dº numero: ", i + 1);
+        System.out.println("Informe dez numeros: ");
+        for (int i = 0; i < numeros.length; i++) {
             numeros[i] = sc.nextInt();
         }
 
-        System.out.println("\nNumeros pares:");
-        for(int i = 0; i < numeros.length; i++) {
-            if(numeros[i] % 2 == 0) {
+        System.out.println("Numeros pares: ");
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 == 0){
+                System.out.println(numeros[i]);
+            }
+        }
+        System.out.println("Numeros impares: ");
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 != 0) {
                 System.out.println(numeros[i]);
             }
         }
 
-        System.out.println("\nNumeros impares:");
-        for(int i = 0; i < numeros.length; i++) {
-            if(numeros[i] % 2 != 0) {
-                System.out.println(numeros[i]);
-            }
-        }
-        
         sc.close();
     }
 }
