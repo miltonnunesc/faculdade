@@ -93,7 +93,6 @@
 
     public class Main {
         public static void main(String[] args) {
-            // Criando um objeto do mundo real
             Carro c1 = new Carro();
 
             c1.marca = "Toyota";
@@ -101,7 +100,6 @@
             c1.cor = "Prata";
             c1.ano = 2022;
     
-            // Chamando comportamentos (métodos) do objeto
             c1.ligar();
             c1.acelerar();
         }
