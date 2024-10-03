@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class IdadeInvalidaException extends Exception {
+class IdadeInvalidaException extends Exception { // O código define uma exceção personalizada chamada IdadeInvalidaException. O programa solicita a idade de uma pessoa e, se a idade for menor que 0 ou maior que 150, a exceção é lançada e tratada, exibindo uma mensagem de erro específica.
     public IdadeInvalidaException(String mensagem) {
         super(mensagem);
     }

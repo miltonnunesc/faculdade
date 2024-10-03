@@ -25,6 +25,7 @@ public class Exercicio06 {
             System.out.println("Operação finalizada.");
         }
         
+        // O programa tenta dividir dois números e acessar um índice fora do limite de um array. Ele trata tanto a exceção de divisão por zero (ArithmeticException) quanto a exceção de índice fora do array (ArrayIndexOutOfBoundsException).
         sc.close();
     }
 }

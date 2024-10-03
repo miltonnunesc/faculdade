@@ -11,7 +11,7 @@ public class Exercicio05 {
         try {
             double resultado = calcularRaizQuadrada(num);
             System.out.println("Raiz quadrada: " + resultado);
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) { // Essa função calcula a raiz quadrada de um número. Se o número for negativo, uma exceção IllegalArgumentException é lançada, indicando que números negativos não possuem raiz quadrada real. A exceção é capturada e tratada no main.
             System.out.println(e.getMessage());
         }
         

@@ -13,7 +13,7 @@ public static void main(String[] args) {
         try {
             int resultado = num1 / num2;
             System.out.println("Resultado: " + resultado);
-        } catch (ArithmeticException e) {
+        } catch (ArithmeticException e) { // Esse código solicita dois números inteiros do usuário e tenta realizar a divisão. Caso o segundo número seja zero, uma exceção ArithmeticException é lançada e tratada, informando que divisão por zero não é permitida.
             System.out.println("Erro: Divisão por zero não permitida!");
         }        
     }
