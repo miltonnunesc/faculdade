@@ -1,0 +1,29 @@
+1. Soma dos dígitos de um número (recursivo):
+A função recebe um número inteiro e calcula a soma de seus dígitos. Ela usa a recursão para dividir o número em dígitos, somando o último dígito (obtido pelo operador %) e chamando a função novamente com o número dividido por 10 até que o número seja zero.
+
+2. Cálculo de potência (recursivo):
+Essa função calcula a potência de um número utilizando recursão. A função multiplica a base por ela mesma, reduzindo o expoente a cada chamada recursiva, até que o expoente chegue a zero, retornando 1.
+
+3. Inversão de uma string (recursivo):
+A função inverte uma string recursivamente. Ela obtém o primeiro caractere da string e, em seguida, chama a função novamente com o restante da string, adicionando o primeiro caractere ao final do resultado da chamada recursiva.
+
+4. Maior elemento em um array (recursivo):
+Esta função encontra o maior elemento em um array de inteiros usando recursão. Ela compara o último elemento com o maior dos elementos anteriores (calculado pela chamada recursiva) até que reste apenas um elemento.
+
+5. Soma de todos os elementos de um array (recursivo):
+A função calcula a soma de todos os elementos de um array de forma recursiva. Ela soma o último elemento do array ao resultado da soma dos elementos anteriores até que o array esteja vazio (ou seja, n é zero).
+
+6. Verificar se uma string é um palíndromo (recursivo):
+Essa função verifica se uma string é um palíndromo (lê-se igual de frente para trás). Ela compara o primeiro e o último caractere, e, se forem iguais, chama a função novamente com a substring que exclui esses dois caracteres, até que o início e o fim se cruzem.
+
+7. Máximo Divisor Comum (MDC) (recursivo):
+A função calcula o MDC de dois números usando o algoritmo de Euclides. Se o segundo número for zero, o primeiro é retornado como MDC. Caso contrário, a função é chamada recursivamente com o segundo número e o resto da divisão do primeiro pelo segundo.
+
+8. Contar o número de elementos pares em um array (recursivo):
+Essa função conta quantos elementos pares existem em um array. A cada chamada recursiva, ela verifica se o último elemento é par e soma 1 ao resultado da contagem dos elementos anteriores.
+
+9. Soma de todos os números naturais de 1 a n (recursivo):
+A função calcula a soma dos números naturais de 1 a n de forma recursiva. Ela soma n à soma dos números naturais até n-1 até que n chegue a zero.
+
+10. Converter um número decimal para binário (recursivo):
+Essa função converte um número decimal para sua representação binária. Ela divide o número por 2, fazendo chamadas recursivas até que o número seja zero, concatenando o resto da divisão (0 ou 1) na string de resultado, que representa o número em binário.
