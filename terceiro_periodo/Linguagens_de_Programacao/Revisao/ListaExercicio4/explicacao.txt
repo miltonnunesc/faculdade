@@ -1,0 +1,24 @@
+Como funciona cada algoritmo
+
+BubbleSort:
+Percorre o array várias vezes.
+Em cada passagem, os maiores elementos "flutuam" para o topo (final do array).
+Continua até que nenhuma troca seja necessária.
+
+Complexidade:
+    Pior caso e caso médio: 𝑂(𝑛2)
+
+Melhor caso: (se o array já estiver ordenado com a otimização do swapped).
+
+Vantagem: Simples de implementar.
+Desvantagem: Ineficiente para listas grandes.
+
+SelectionSort:
+Divide o array em duas partes: uma parte ordenada e outra desordenada.
+Em cada passo, o menor elemento da parte desordenada é movido para a parte ordenada.
+
+Complexidade:
+Pior caso, caso médio e melhor caso: 𝑂(𝑛2)
+
+Vantagem: Fácil de implementar e não depende da ordem inicial dos elementos.
+Desvantagem: Também é ineficiente para listas grandes.

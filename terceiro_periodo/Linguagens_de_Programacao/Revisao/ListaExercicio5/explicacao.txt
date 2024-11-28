@@ -1,0 +1,22 @@
+Como os Algoritmos Funcionam
+
+InsertionSort:
+Divide o array em duas partes: ordenada e desordenada.
+Iterativamente insere cada elemento da parte desordenada na posição correta da parte ordenada.
+
+Complexidade:
+    Melhor caso: 𝑂(𝑛) (se o array já estiver ordenado).
+    Pior caso e caso médio: 𝑂(𝑛2) (se o array estiver em ordem inversa).
+
+Vantagem: Simples e eficiente para arrays pequenos.
+Desvantagem: Ineficiente para listas grandes.
+
+Heapify:
+Garante a propriedade de heap máximo para um nó e seus filhos.
+É usado como base para o algoritmo HeapSort, onde o array é tratado como uma estrutura de heap.
+
+Complexidade:
+    onstruir um heap máximo: 𝑂(𝑛)
+    Ajustar uma subárvore: 𝑂(log 𝑛)
+    
+Vantagem: Fundamental para o desempenho eficiente do HeapSort.
