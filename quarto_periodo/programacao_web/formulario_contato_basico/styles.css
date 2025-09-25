@@ -1,0 +1,9 @@
+/* ======================================================
+STYLES.CSS — Estilos do Formulário de Contato
+Objetivo: demonstrar organização, comentários e boas práticas
+====================================================== */
+
+/* --------- Reset mínimo e variáveis (tema) --------- */
+*{ box-sizing:  border-box; }
+html, body { margin: 0; padding: 0;}
+img { max-width: 100%; display: block;}

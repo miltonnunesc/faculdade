@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Ligação do CSS externo (melhor prática para projetos reais) -->
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--
+        PRÁTICA: Formulário de Contato Básico
+        Objetivos:
+        - Estruturar um formulário semântico e acessível em HTML.
+        - Estilizar usando CSS externo.
+        - Compreender rótulos (label), campos (input/textarea), validação nativa e estados de foco.
+    -->
+
+    <!-- Cabeçalho da página -->
+    <header class="topbar" role="banner">
+        <div class="container">
+            <h1 class="logo">Contato</h1>
+            <p class="subtitle">Exemplo didático de formulário HTML + CSS</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="conteudo" id="conteudo" role="main">
+        <div class="container">
+            <!-- Seção introdutória com instruções -->
+            <section aria-labelledby="titulo-instrucoes" class="bloco bloco--intro">
+                <h2>Como funciona</h2>
+                <p>
+                    Este formulário demonstra boas práticas de marcação, acessibilidade e estilos. 
+                    Preencha os campos e observe os diferentes estados (foco, erro, sucesso).
+                </p>
+            </section>
+
+             <!-- Formulário de contato acessível -->
+            <section aria-labelledby="titulo-form" class="bloco">
+                <h2 id="titulo-form">Fale comigo</h2>
+
+                <!--
+                O atributo 'novalidate' é omitido para permitir a validação nativa do navegador.
+                Cada input possui um <label> associado via 'for' + 'id'.
+                -->
+                <form class="form-contato" action="#" method="post" aria-describedby="ajuda-form">
+                    <p id="ajuda-form" class="ajuda">
+                        Campos marcados com * são obrigatórios.
+                    </p>
+                    <!-- Nome -->
+                    <div class="campo">
+                        <!-- 'for' aponta para o mesmo id do input -->
+                        <label for="nome">Nome completo: *</label>
+
+                        <!-- 'required' força preenchimento; 'autocomplete' sugere dados ao usuário -->
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Maria Silva"
+                            required
+                            autocomplete="name">
+                        <!-- Mensagem de auxílio/erro (visível somente quando necessário) -->
+                        <small class="msg" aria-live="polite"></small>
+                    </div>
+                    
+                    <!-- E-mail -->
+                    <div class="campo">
+                        <label for="email">E-mail: *</label>
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="voce@exemplo.com"
+                            required
+                            autocomplete="email">
+                        <!-- Mensagem de auxílio/erro (visível somente quando necessário) -->
+                        <small class="msg" aria-live="polite"></small>
+                    </div>
+
+                    <!-- Assunto (select) -->
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="">Selecione...</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="orcamento">Orçamento</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                        <!-- Mensagem de auxílio/erro (visível somente quando necessário) -->
+                        <small class="msg" aria-live="polite"></small>
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div class="campo">
+                        <label for="mensagem">Mensagem: *</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="6"
+                            placeholder="Escreva sua mensagem..."
+                            required>
+                        </textarea>
+                        <!-- Mensagem de auxílio/erro (visível somente quando necessário) -->
+                        <small class="msg" aria-live="polite"></small>
+                    </div>
+
+                    <!-- Termos (checkbox) -->
+                    <div class="campo campo--linha">
+                        <!-- Use <input> antes do texto para leitura de screen readers -->
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Li e concordo com os termos. *</label>
+                    </div>
+
+                    <!-- Botões de ação -->
+                    <div class="acoes">
+                        <button class="botao botao--primario" type="submit">Enviar</button>
+                        <button class="botao botao--fantasma" type="reset">Limpar</button>
+                    </div>
+
+                    <!-- Observação acessível: hint para teclado -->
+                    <p class="dica-acessibilidade"> 
+                        Dica: use <kbd>Tab</kbd> para navegar pelos campos.
+                    </p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé simples -->
+     <footer class="rodape" role="contentinfo">
+        <div class="container">
+        <small>© 2025 — Exemplo de Formulário. Feito com HTML + CSS por Lucas Ferreira</small>        </div>
+     </footer>
+</body>
+</html>
