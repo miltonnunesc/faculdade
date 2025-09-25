@@ -1,11 +1,38 @@
-.navbar {
-    position: fixed;
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+header {
+    background-color: #333; /* cor do cabeçalho */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
+    /* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+    /* Menu de navegação */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
