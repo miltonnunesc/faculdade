@@ -7,3 +7,145 @@ Objetivo: demonstrar organização, comentários e boas práticas
 *{ box-sizing:  border-box; }
 html, body { margin: 0; padding: 0;}
 img { max-width: 100%; display: block;}
+
+:root {
+    /* Paleta */
+    --bg: #0f1420;          /* fundo geral escuro - Background*/
+    --surface: #141b2d;     /* superfícies (cartões, blocos) */
+    --border: #2a3248;      /* linhas e contornos sutis */
+    --text: #e4e9f0;        /* texto principal */
+    --muted: #b0b7c3;       /* texto secundário */
+    --primary: #1bbf72;     /* cor de destaque */
+    --primary-dark: #0e8f55;
+
+    /* Tipografia e espaçamento */
+    --ff: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu. sans-serif; /* Font Family */
+    --fs: 16px; /* Font size */
+    --lh: 1.6;
+    --radius: 14px;
+    --shadow: 0 8px 30px rgba(0,0,0,.25);
+    --gap: 1rem;
+}
+
+/* --------- Base do documento --------- */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font: 400 1rem/var(--lh) var(--ff);
+}
+
+/* Container centralizado, largura máxima responsiva */
+.container {
+    width: min(1000px, 92%);
+    margin-inline: auto;
+}
+
+/* --------- Cabeçalho (topbar) --------- */
+.topbar {
+    position: sticky; /* fixa no topo ao rolar */
+    top: 0;
+    background: rgba(15,20,32,.8);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+}
+
+.topbar .container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    font: 800 1.25rem/1 var(--ff);
+    letter-spacing: .5px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* --------- Blocos/seções --------- */
+.conteudo {
+    padding: 2rem 0 3rem;
+}
+
+.bloco {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.bloco + .bloco {
+    margin-top: 1rem;
+}
+
+.bloco--intro {
+    border-style: dashed;
+}
+
+/* --------- Títulos --------- */
+h2 {
+    margin: 0 0 .75rem;
+    font: 700 1.4rem/1.2 var(--ff);
+}
+
+h1, h2, h3, h4 {
+    scroll-margin-top: 6rem; /* âncoras não ficam escondidas pela topbar */
+}
+
+/* --------- Formulário --------- */
+.form-contato {
+    display: grid;
+    gap: 1rem;
+}
+
+.ajuda {
+    color: var(--muted);
+    margin-top: 0;
+}
+
+.campo {
+    display: grid;
+    gap: .4rem;
+}
+
+.campo--linha {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+/* Inputs e textarea com estilos consistentes */
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato select,
+.form-contato textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: #0d1220;
+    color: var(--text);
+    padding: .75rem .9rem;
+    border-radius: 10px;
+    outline: none; /* controlaremos o foco abaixo */
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+/* Foco visível e amigável à acessibilidade */
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 35%, transparent);
+}
+
+/* Espaço maior para textarea */
+.form-contato textarea {
+    resize: vertical;
+    min-height: 160px;
+}
