@@ -49,3 +49,20 @@ console.log(somar2(3,3));
 
 const somar3 = (a,b) => a + b;
 console.log(somar3 (4,6));
+
+//
+
+const usuario = {
+    nome3 : "Saulo",
+    idade3 : 22,
+    cidade3 : "Belo Horizonte"
+}
+
+const {nome3, idade3, cidade3} = usuario;
+console.log(nome3);
+console.log(cidade3);
+
+const cores = ["Azul", "Branco", "Preto"];
+const [primeiro, segundo, terceiro] = cores;
+
+console.log(primeiro);
