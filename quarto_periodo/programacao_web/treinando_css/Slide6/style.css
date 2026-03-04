@@ -1,0 +1,9 @@
+body {
+    background-image: url("gato.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    color: white;
+}

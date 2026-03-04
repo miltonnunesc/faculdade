@@ -1,0 +1,27 @@
+h1 {
+    font-family: times;
+    font-size: 250%;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 130%;
+    font-style: normal;
+}
+
+p {
+    font-family: courier;
+    font-size: 100%;
+}
+
+p.sansserif {
+    font-family: sans-serif;
+}
+
+p.small {
+ font-variant: small-caps;   
+}
+
+p.negrito { 
+    font-weight: bold;
+}
